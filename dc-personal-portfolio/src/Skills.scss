@@ -1,0 +1,30 @@
+.skills {
+    background-color: #ff64cb;
+  }
+  
+  .skills-container ul li {
+    background-color: white;
+    padding: 4em 2em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+  
+    .icon-container {
+      height: 100px;
+      display: grid;
+      place-content: center;
+      margin: 0 auto;
+  
+      img {
+        width: 80px;
+      }
+    }
+  
+    .skill-title {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  
+    .featured-desc {
+      margin-bottom: 2em;
+    }
+  }

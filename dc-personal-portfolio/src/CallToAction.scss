@@ -1,0 +1,15 @@
+call-to-action {
+  height: 4vh;
+  padding: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+}
+.call-to-action-title span {
+  color: #ff64cb;
+  text-decoration: underline;
+}
