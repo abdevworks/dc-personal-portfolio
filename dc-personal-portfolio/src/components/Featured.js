@@ -20,9 +20,9 @@ function Featured({
       <ContentCenterMd>
         <SectionSubtitle>{projectSubtitle}</SectionSubtitle>
         <SectionTitle href={href}>{projectTitle}</SectionTitle>
-
         <SectionDescription>{description}</SectionDescription>
       </ContentCenterMd>
+      
       <SectionImage src={src} alt={alt} href={href} />
     </StyledSectionWrapper>
   );

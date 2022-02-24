@@ -1,17 +1,28 @@
 import React from "react";
-import portfolioContent from "../content";
-import Card from './Card';
-import { StyledPortfolio } from "./styles/Portfolio.styled";
+import styled from "styled-components";
+import ProjectCard from './ProjectCard';
 
-function Portfolio() {
+
+function Portfolio({ portfolioContent, subtitleColor, bg }) {
 
   return (
-    <StyledPortfolio id="portfolio">
+    <StyledPortfolioWrapper id="portfolio" style={{
+      '--bg': bg
+    }}>
       {portfolioContent.map((item, index) =>
-        <Card key={index} item={item} />
+        <ProjectCard key={index} item={item} subtitleColor={subtitleColor}/>
       )}
-    </StyledPortfolio>
+    </StyledPortfolioWrapper>
   );
 }
+
+export const StyledPortfolioWrapper = styled.section`
+  background-color: var(--bg, var(--color-portfolio));
+
+  @media only screen and (min-width: ${({ theme }) => theme.medium}) {
+    text-align: left;
+    padding-top: 7em;
+  }
+`;
 
 export default Portfolio;

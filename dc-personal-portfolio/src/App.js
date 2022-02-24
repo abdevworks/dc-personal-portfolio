@@ -9,7 +9,7 @@ import Skills from "./components/Skills";
 import GlobalStyles from "./components/styles/Global";
 import HeaderSection from "./components/HeaderSection";
 
-import { featuredContent } from "./content";
+import { featuredContent, skillContent, portfolioContent } from "./content";
 
 const theme = {
   colors: {
@@ -29,15 +29,15 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <HeaderSection />
+      <HeaderSection logoText="Arkadiusz Biesiada" />
       <Hero
         title="Beutifuly Crafted Web Experiences"
         meet="Arkadiusz Biesiada"
       />
       <Featured featuredContent={featuredContent} />
-      <Skills />
-      <Portfolio />
-      <CallToAction />
+      <Skills skillContent={ skillContent } />
+      <Portfolio portfolioContent={ portfolioContent } />
+      <CallToAction/>
       <Contact />
       <Footer />
     </ThemeProvider>

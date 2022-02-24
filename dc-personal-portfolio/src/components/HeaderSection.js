@@ -5,11 +5,11 @@ import SocialHeader from "./SocialHeader";
 import HeaderNavigation from "./HeaderNavigation";
 import Logo from "./Logo";
 
-function HeaderSection() {
+function HeaderSection({ logoText }) {
   return (
     <Header>
       <HeaderNavigation>
-        <Logo href="index.html">Arkadiusz Biesiada</Logo>
+        <Logo href="index.html">{ logoText }</Logo>
         <Navigation>
           <ul>
             <li>

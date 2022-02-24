@@ -1,50 +1,38 @@
 import React from "react";
-import {
-  StyledSkills,
-  StyledSkillsContainer,
-  StyledIconContainer,
-  StyledSkillTitle,
-  StyledSkillDescription,
-} from "./styles/Skills.styled";
+import styled from "styled-components";
+import SkillCard from "./SkillCard";
 
-function Skills() {
-  const skillCard = ({ image, alt, title, description }) => (
-    <li className="transition2">
-      <StyledIconContainer>
-        <img src={image} alt={alt} />
-      </StyledIconContainer>
-      <StyledSkillTitle>{title}</StyledSkillTitle>
-      <StyledSkillDescription>{description}</StyledSkillDescription>
-    </li>
-  );
-
+function Skills({ skillContent, bg }) {
   return (
-    <StyledSkills id="skills">
-      <StyledSkillsContainer>
-        {skillCard({
-          image: "images/dashicons_html.svg",
-          alt: "html icon",
-          title: "html",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem quis euismod lacus viverra.",
-        })}
-        {skillCard({
-          image: "images/uil_java-script.svg",
-          alt: "java script icon",
-          title: "java script",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem quis euismod lacus viverra.",
-        })}
-        {skillCard({
-          image: "images/akar-icons_react-fill.svg",
-          alt: "react icon",
-          title: "react",
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sem quis euismod lacus viverra.",
-        })}
-      </StyledSkillsContainer>
-    </StyledSkills>
+    <SectionBackground style={{
+      '--bg': bg
+    }}>
+      <StyledSkillsWrapper>
+        {skillContent.map((skill, index) => (
+          <SkillCard skill={skill} key={index} />
+        ))}
+      </StyledSkillsWrapper>
+    </SectionBackground>
   );
 }
+
+const SectionBackground = styled.section`
+  background-color: var(--bg, var(--color-skills));
+`;
+
+const StyledSkillsWrapper = styled.ul`
+
+  @media only screen and (min-width: ${({ theme }) => theme.medium}) {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 1em;
+  }
+
+  @media only screen and (min-width: ${({ theme }) => theme.medium}) {
+    margin-top: -5em;
+    margin-bottom: -7em;
+    padding-top: 7em;
+  }
+`;
 
 export default Skills;

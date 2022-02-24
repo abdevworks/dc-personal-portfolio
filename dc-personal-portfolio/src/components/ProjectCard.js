@@ -5,13 +5,13 @@ import SectionSubtitle from "./SectionSubtitle";
 import SectionImage from "./SectionImage";
 import { StyledCardContainer, StyledCardLeft } from "./styles/Card.styled";
 
-function Card({
-  item: { projectSubtitle, projectName, description, image, href, alt },
+function ProjectCard({
+  item: { projectSubtitle, projectName, description, image, href, alt }, subtitleColor
 }) {
   return (
     <StyledCardContainer>
       <StyledCardLeft>
-        <SectionSubtitle>{projectSubtitle}</SectionSubtitle>
+        <SectionSubtitle subtitleColor={subtitleColor}>{projectSubtitle}</SectionSubtitle>
         <SectionTitle>{projectName}</SectionTitle>
         <SectionDescription>{description}</SectionDescription>
       </StyledCardLeft>
@@ -22,4 +22,4 @@ function Card({
   );
 }
 
-export default Card;
+export default ProjectCard;
