@@ -42,6 +42,12 @@ const StyledScrollSvg = styled.svg`
   @media only screen and (min-width: ${({ theme }) => theme.large}) {
     margin-top: 10em;
   }
+  @media only screen and (min-width: ${({ theme }) => theme.xl}) {
+    margin-top: 15em;
+  }
+  @media only screen and (min-width: ${({ theme }) => theme.xxl}) {
+    margin-top: 15em;
+  }
 `;
 
 export default ScrollSvg;

@@ -12,7 +12,8 @@ function SectionImage({ src, alt, href }) {
 
 const StyledSectionImage = styled.img`
   border-radius: 1em;
-
+  margin-bottom: 2em;
+  
   @media only screen and (min-width: ${({ theme }) => theme.medium}) {
     margin-left: 2em;
     margin-top: 1em;

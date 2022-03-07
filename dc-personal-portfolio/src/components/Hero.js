@@ -3,15 +3,11 @@ import styled from "styled-components";
 import Meet from "./Meet";
 import ScrollSvg from "./ScrollSvg";
 import HeroDesignSvg from "./HeroDesignSvg";
+import GridContainer from "./GridContainer";
 
-function Hero({ title, meet, color, bg, meetColor }) {
+function Hero({ title, meet, bg, meetColor }) {
   return (
-    <StyledHero
-      style={{
-        "--color": color,
-        "--bg": bg,
-      }}
-    >
+    <GridContainer position="left" bg="var(--color-hero)">
       <StyledContent
         style={{
           "--bg": bg,
@@ -21,32 +17,32 @@ function Hero({ title, meet, color, bg, meetColor }) {
         <Meet color={meetColor}>{meet}</Meet>
         <ScrollSvg width="40px" />
       </StyledContent>
+
       <HeroDesignSvg />
-    </StyledHero>
+    </GridContainer>
   );
 }
 
-const StyledHero = styled.div`
-  background-color: var(--bg, var(--color-hero));
-  color: var(--color, white);
-  display: grid;
-  text-align: center;
-  padding: 4em;
-
-  @media only screen and (min-width: ${({ theme }) => theme.large}) {
-    height: 90vh;
-    display: grid;
-    grid-template-columns: 66% auto;
-    background-color: unset;
-    padding: 0;
-  }
-`;
-
 const StyledContent = styled.div`
+  padding: 4em;
+  padding-bottom: 0;
+  text-align: center;
+
   @media only screen and (min-width: ${({ theme }) => theme.large}) {
     background-color: var(--bg, var(--color-hero));
-    padding: 6em 8em 6em 4em;
+    height: 74vh;
+    padding: 6em 8em 6em 8em;
+    padding-left: var(--page-padding-large);
     text-align: left;
+  }
+  @media only screen and (min-width: ${({ theme }) => theme.xl}) {
+    padding: 6em 8em 6em 10em;
+    padding-left: var(--page-padding-xl);
+  }
+  @media only screen and (min-width: ${({ theme }) => theme.xxl}) {
+    padding: 9em 15em 6em 15em;
+    padding-right: var(--page-padding-xxl);
+    padding-left: var(--page-padding-xxl);
   }
 `;
 

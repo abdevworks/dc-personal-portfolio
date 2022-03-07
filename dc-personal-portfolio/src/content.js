@@ -2,33 +2,34 @@ export const portfolioContent = [
   {
     id: 1,
     projectSubtitle: "guitar app",
-    projectName: "Fretastic.com",
+    projectTitle: "Fretastic.com",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tortor a elit velit. Vel posuere lorem neque velit auctor ut gravida tellus. Vel quam mauris elementum fermentum mattis ante.",
-    image: "images/project-two.png",
+    src: "images/project-two.png",
     alt: "fretastic",
   },
   {
     id: 2,
     projectSubtitle: "guitar app",
-    projectName: "Fretastic.com",
+    projectTitle: "Fretastic.com",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tortor a elit velit. Vel posuere lorem neque velit auctor ut gravida tellus. Vel quam mauris elementum fermentum mattis ante.",
-    image: "images/project-two.png",
+    src: "images/project-two.png",
     alt: "fretastic",
   },
   {
     id: 3,
     projectSubtitle: "guitar app",
-    projectName: "Fretastic.com",
+    projectTitle: "Fretastic.com",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tortor a elit velit. Vel posuere lorem neque velit auctor ut gravida tellus. Vel quam mauris elementum fermentum mattis ante.",
-    image: "images/project-two.png",
+    src: "images/project-two.png",
     alt: "fretastic",
   },
 ];
 
 export const featuredContent = {
+  id: 1,
   projectSubtitle: "Featured Project",
   projectTitle: "DesignCourse.com ReDesign",
   description:
@@ -62,4 +63,20 @@ export const skillContent = [
   },
 ];
 
-
+export const socialMediaContent = [
+  {
+    href: "arkadiuszbiesiada@gmail.com",
+    src: "images/bytesize_mail.svg",
+    alt: "email",
+  },
+  {
+    href: "www.twitter.com",
+    src: "images/akar-icons_twitter-fill.svg",
+    alt: "twitter",
+  },
+  {
+    href: "abdevworks.github.com",
+    src: "images/akar-icons_github-fill.svg",
+    alt: "github",
+  },
+];

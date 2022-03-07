@@ -20,7 +20,6 @@ export const StyledPortfolioWrapper = styled.section`
   background-color: var(--bg, var(--color-portfolio));
 
   @media only screen and (min-width: ${({ theme }) => theme.medium}) {
-    text-align: left;
     padding-top: 7em;
   }
 `;

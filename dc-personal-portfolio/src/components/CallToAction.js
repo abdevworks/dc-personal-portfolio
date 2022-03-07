@@ -5,7 +5,7 @@ import ActionHeading from "./ActionHeading";
 
 function CallToAction({  height, padding, color }) {
   return (
-    <StyledCallToActionWrapper style={{
+    <StyledCallToActionWrapper id="hireme" style={{
       '--height': height,
       '--padding': padding
     }}>
