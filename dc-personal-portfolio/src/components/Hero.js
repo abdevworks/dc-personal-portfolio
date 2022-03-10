@@ -1,25 +1,57 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
 import styled from "styled-components";
 import Meet from "./Meet";
 import ScrollSvg from "./ScrollSvg";
 import HeroDesignSvg from "./HeroDesignSvg";
 import GridContainer from "./GridContainer";
+import BackgroundColor from "./BackgroundColor";
 
 function Hero({ title, meet, bg, meetColor }) {
-  return (
-    <GridContainer position="left" bg="var(--color-hero)">
-      <StyledContent
-        style={{
-          "--bg": bg,
-        }}
-      >
-        <StyledHeading>{title}</StyledHeading>
-        <Meet color={meetColor}>{meet}</Meet>
-        <ScrollSvg width="40px" />
-      </StyledContent>
+  const heroConRef = useRef();
+  const titleRef = useRef();
+  const meetRef = useRef();
+  const scrollSvgRef = useRef();
 
-      <HeroDesignSvg />
-    </GridContainer>
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.from(heroConRef.current, {
+      y: "-30%",
+      opacity: 0,
+      duration: 2,
+      ease: "power4.out",
+    });
+
+    tl.from(
+      [titleRef.current, meetRef.current, scrollSvgRef.current],
+      {
+        opacity: 0,
+        y: -50,
+        stagger: 0.3,
+        duration: 2,
+        ease: "power4.out",
+      },
+      "-=1.5"
+    );
+
+  });
+
+  return (
+    <BackgroundColor bg="var(--color-hero)">
+      <GridContainer position="left" ref={heroConRef}>
+        <StyledContent
+          style={{
+            "--bg": bg,
+          }}
+        >
+          <StyledHeading ref={titleRef}>{title}</StyledHeading>
+          <Meet color={meetColor} ref={meetRef}>{meet}</Meet>
+          <ScrollSvg width="40px" ref={scrollSvgRef}/>
+        </StyledContent>
+
+        <HeroDesignSvg />
+      </GridContainer>
+    </BackgroundColor>
   );
 }
 

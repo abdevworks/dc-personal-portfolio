@@ -1,32 +1,35 @@
 import React from "react";
 import styled from "styled-components";
 
-function GridContainer({ position = "auto", minScreenWidth = "large", bg, color, children }) {
-  
-    const mainContentScreenCoverage = "66%"
-    const gridPosition = {
-    left: `${mainContentScreenCoverage} auto`,
-    right: `auto ${mainContentScreenCoverage}`,
-    auto: "auto auto",
-  };
-  let gridTemplateColumns = gridPosition[position];
 
-  return (
-    <StyledGridWrapper
-      minWidth={minScreenWidth}
-      gridTemplateColumns={gridTemplateColumns}
-      style={{
-        "--bg": bg,
-        "--color": color,
-      }}
-    >
-      {children}
-    </StyledGridWrapper>
-  );
-}
+const GridContainer = React.forwardRef(
+  ({ position = "auto", minScreenWidth = "large", bg, color, children }, ref) => {
+    const mainContentScreenCoverage = "66%";
+    const gridPosition = {
+      left: `${mainContentScreenCoverage} auto`,
+      right: `auto ${mainContentScreenCoverage}`,
+      auto: "auto auto",
+    };
+    let gridTemplateColumns = gridPosition[position];
+
+    return (
+      <StyledGridWrapper
+        minWidth={minScreenWidth}
+        gridTemplateColumns={gridTemplateColumns}
+        style={{
+          "--bg": bg,
+          "--color": color,
+        }}
+        ref={ref}
+      >
+        {children}
+      </StyledGridWrapper>
+    );
+  }
+);
 
 export const StyledGridWrapper = styled.div`
-  background-color: var(--bg, var(--color-header));
+  background-color: var(--bg);
   color: var(--color, white);
 
   @media only screen and (min-width: ${({ theme, minWidth }) => theme[minWidth]}) {

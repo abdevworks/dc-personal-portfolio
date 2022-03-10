@@ -1,13 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
-function BackgroundColor({ children }) {
+function BackgroundColor({ bg, children }) {
   return (
-    <StyledBackgroundColor>{children}</StyledBackgroundColor>
+    <StyledBackgroundColor style={{
+      '--bgc': bg
+    }}>{children}</StyledBackgroundColor>
   )
 }
 
 const StyledBackgroundColor = styled.div`
-    background-color: var(--color-bg-default);
+    background-color: var(--bgc, var(--color-bg-default));
 `
 export default BackgroundColor

@@ -1,12 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-function ScrollSvg({ width, height}) {
+const ScrollSvg = React.forwardRef(({ width, height }, ref) => {
   return (
-    <StyledScrollSvg style={{
-      '--width': width,
-      '--height': height
-    }} >
+    <StyledScrollSvg
+      style={{
+        "--width": width,
+        "--height": height,
+      }}
+      ref={ref}
+    >
       <g id="scroll" transform="translate(-253 -787)">
         <g
           id="Rectangle_12"
@@ -32,12 +35,40 @@ function ScrollSvg({ width, height}) {
       </g>
     </StyledScrollSvg>
   );
-}
+});
 
 const StyledScrollSvg = styled.svg`
   width: var(--width);
   height: var(--height);
   margin-top: 2em;
+
+  .circle {
+  animation: circleAnim 1s infinite alternate-reverse;
+}
+
+@-webkit-keyframes circleAnim {
+  from {
+    -webkit-transform: translate(262px, 798px);
+            transform: translate(262px, 798px);
+    z-index: 5;
+  }
+  to {
+    -webkit-transform: translate(262px, 830px);
+            transform: translate(262px, 830px);
+  }
+}
+
+@keyframes circleAnim {
+  from {
+    -webkit-transform: translate(262px, 798px);
+            transform: translate(262px, 798px);
+    z-index: 5;
+  }
+  to {
+    -webkit-transform: translate(262px, 830px);
+            transform: translate(262px, 830px);
+  }
+}
 
   @media only screen and (min-width: ${({ theme }) => theme.large}) {
     margin-top: 10em;

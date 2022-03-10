@@ -1,18 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-function Meet({ color, children }) {
+const Meet = React.forwardRef(({ color, children }, ref) => {
   return (
     <StyledMeetWrapper
       style={{
         "--color": color,
       }}
+      ref={ref}
     >
       <img src="images/cil_hand-point-down.svg" alt="point down" />
       <p>Meet {children}</p>
     </StyledMeetWrapper>
   );
-}
+});
 
 const StyledMeetWrapper = styled.div`
   display: flex;
