@@ -12,8 +12,8 @@ function SocialHeader({ position = "center", socialMediaContent }) {
   return (
     <StyledSocialHeaderWrapper headerPosition = {headerPosition[position]}>
       <ul>
-        {socialMediaContent.map(({ href, src, alt }) => (
-          <li>
+        {socialMediaContent.map(({ href, src, alt }, index) => (
+          <li key={index}>
             <a href={href}>
               <img src={src} alt={alt} />
             </a>

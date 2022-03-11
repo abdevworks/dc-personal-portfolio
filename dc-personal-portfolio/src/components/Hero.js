@@ -12,6 +12,7 @@ function Hero({ title, meet, bg, meetColor }) {
   const titleRef = useRef();
   const meetRef = useRef();
   const scrollSvgRef = useRef();
+  const heroDesignSvgRef = useRef();
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -34,24 +35,34 @@ function Hero({ title, meet, bg, meetColor }) {
       "-=1.5"
     );
 
+    tl.from(
+      heroDesignSvgRef.current,
+      {
+        opacity: 0,
+        y: 50,
+        ease: "power4.out",
+        duration: 1,
+      },
+      "-=2"
+    );
+
   });
 
   return (
-    <BackgroundColor bg="var(--color-hero)">
-      <GridContainer position="left" ref={heroConRef}>
+      <GridContainer position="left" bg="var(--color-hero)">
         <StyledContent
           style={{
             "--bg": bg,
           }}
+          ref={heroConRef}
         >
           <StyledHeading ref={titleRef}>{title}</StyledHeading>
           <Meet color={meetColor} ref={meetRef}>{meet}</Meet>
           <ScrollSvg width="40px" ref={scrollSvgRef}/>
         </StyledContent>
 
-        <HeroDesignSvg />
+        <HeroDesignSvg ref={heroDesignSvgRef} />
       </GridContainer>
-    </BackgroundColor>
   );
 }
 

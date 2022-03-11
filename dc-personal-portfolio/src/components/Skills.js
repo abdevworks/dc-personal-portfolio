@@ -1,8 +1,35 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import SkillCard from "./SkillCard";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function Skills({ skillContent, bg }) {
+
+  const revealRefs = useRef([]);
+  revealRefs.current = [];
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    gsap.from(revealRefs.current, {
+      scrollTrigger: {
+        trigger: revealRefs.current,
+        start: "top bottom",
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1.2,
+      stagger: 0.3,
+    });
+  })
+
+  const addToRefs = (el) => {
+    if(el && !revealRefs.current.includes(el)){
+      revealRefs.current.push(el);
+    }
+    console.log(revealRefs.current);
+  };
+
   return (
     <SectionBackground
       id="skills"
@@ -12,7 +39,7 @@ function Skills({ skillContent, bg }) {
     >
       <StyledSkillsWrapper>
         {skillContent.map((skill, index) => (
-          <SkillCard skill={skill} key={index} />
+          <SkillCard skill={skill} key={index} ref={addToRefs}/>
         ))}
       </StyledSkillsWrapper>
     </SectionBackground>

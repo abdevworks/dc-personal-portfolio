@@ -16,6 +16,7 @@ const GridContainer = React.forwardRef(
       <StyledGridWrapper
         minWidth={minScreenWidth}
         gridTemplateColumns={gridTemplateColumns}
+        bg={bg}
         style={{
           "--bg": bg,
           "--color": color,
@@ -29,7 +30,7 @@ const GridContainer = React.forwardRef(
 );
 
 export const StyledGridWrapper = styled.div`
-  background-color: var(--bg);
+  background-color: ${({ bg }) => bg};
   color: var(--color, white);
 
   @media only screen and (min-width: ${({ theme, minWidth }) => theme[minWidth]}) {

@@ -3,9 +3,9 @@ import styled from "styled-components";
 import SkillTitle from "./SkillTitle";
 import SkillDescription from "./SkillDescription";
 
-function SkillCard({ skill: { image, alt, title, description } }) {
+const SkillCard = React.forwardRef(({ skill: { image, alt, title, description }}, ref ) => {
   return (
-    <StyledSkillCardWrapper>
+    <StyledSkillCardWrapper ref={(ref)}>
       <StyledSkillIconWrapper>
         <img src={image} alt={alt} />
       </StyledSkillIconWrapper>
@@ -13,7 +13,7 @@ function SkillCard({ skill: { image, alt, title, description } }) {
       <SkillDescription>{description}</SkillDescription>
     </StyledSkillCardWrapper>
   );
-}
+})
 
 const StyledSkillCardWrapper = styled.li`
   background-color: white;
