@@ -11,9 +11,13 @@ function HeaderNavigation({ children }) {
 const StyledHeaderNavigationWrapper = styled.header`
   display: flex;
   justify-content: space-between;
+  align-content: center;
 
   background-color: var(--color-header);
-  padding: 2em;
+  padding: 0 2em 0 2em;
+  height: 100%;
+  min-height: 8vh;
+
 
   @media only screen and (min-width: ${({ theme }) => theme.large}) {
     padding-left: var(--page-padding-large);

@@ -2,6 +2,7 @@ import React from "react";
 import FooterDesignSvg from "./FooterDesignSvg";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
+import NavigationOption from "./HeaderOption";
 import styled from "styled-components";
 
 function Footer() {
@@ -9,19 +10,11 @@ function Footer() {
     <StyledFooter>
       <FooterDesignSvg />
       <StyledFooterContainer>
-        <Logo href="index.html">
-          Arkadiusz Biesiada
-        </Logo>
+        <Logo href="index.html">Arkadiusz Biesiada</Logo>
 
         <Navigation>
-          <ul>
-            <li>
-              <a href="#portfolio">My work</a>
-            </li>
-            <li>
-              <a href="#skills">My skills</a>
-            </li>
-          </ul>
+          <NavigationOption href="#portfolio">My work</NavigationOption>
+          <NavigationOption href="#skills">My skills</NavigationOption>
         </Navigation>
       </StyledFooterContainer>
     </StyledFooter>

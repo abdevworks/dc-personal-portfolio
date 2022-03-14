@@ -8,6 +8,9 @@ function Logo({ children }) {
 export default Logo;
 
 const LogoLink = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--color-logo);
   font-weight: bold;
 `;

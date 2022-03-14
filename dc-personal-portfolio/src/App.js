@@ -14,7 +14,6 @@ import {
   featuredContent,
   skillContent,
   portfolioContent,
-  socialMediaContent,
 } from "./content";
 
 const theme = {
@@ -38,17 +37,16 @@ function App() {
       <BackgroundColor>
         <HeaderSection
           logoText="Arkadiusz Biesiada"
-          socialMediaContent={socialMediaContent}
         />
         <Hero
           title="Beutifuly Crafted Web Experiences"
-          meet="Arkadiusz Biesiada"
+          meet="Arkadiusza Biesiadę"
         />
         <Featured featuredContent={featuredContent} />
         <Skills skillContent={skillContent} />
         <Portfolio portfolioContent={portfolioContent} />
         <CallToAction />
-        <Contact socialMediaContent={socialMediaContent} />
+        <Contact />
         <Footer />
       </BackgroundColor>
     </ThemeProvider>

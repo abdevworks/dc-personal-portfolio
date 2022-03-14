@@ -10,7 +10,7 @@ const Meet = React.forwardRef(({ color, children }, ref) => {
       ref={ref}
     >
       <img src="images/cil_hand-point-down.svg" alt="point down" />
-      <p>Meet {children}</p>
+      <p>Poznaj {children}</p>
     </StyledMeetWrapper>
   );
 });

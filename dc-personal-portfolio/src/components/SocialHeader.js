@@ -1,7 +1,11 @@
 import React from "react";
+import SocialHeaderOption from "./SocialHeaderOption";
+import EmailIcon from '@mui/icons-material/Email';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import styled from "styled-components";
 
-function SocialHeader({ position = "center", socialMediaContent }) {
+function SocialHeader({ position = "center" }) {
 
   const headerPosition = {
     left: "start",
@@ -12,13 +16,9 @@ function SocialHeader({ position = "center", socialMediaContent }) {
   return (
     <StyledSocialHeaderWrapper headerPosition = {headerPosition[position]}>
       <ul>
-        {socialMediaContent.map(({ href, src, alt }, index) => (
-          <li key={index}>
-            <a href={href}>
-              <img src={src} alt={alt} />
-            </a>
-          </li>
-        ))}
+        <SocialHeaderOption Icon={EmailIcon} href="arkadiuszbiesiada@gmail.com"/>
+        <SocialHeaderOption Icon={LinkedInIcon} href="https://www.linkedin.com/in/arkadiusz-biesiada-ab600722b/"/>
+        <SocialHeaderOption Icon={GitHubIcon} href="https://github.com/abdevworks"/>
       </ul>
     </StyledSocialHeaderWrapper>
   );

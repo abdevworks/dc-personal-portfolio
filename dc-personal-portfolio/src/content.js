@@ -63,20 +63,3 @@ export const skillContent = [
   },
 ];
 
-export const socialMediaContent = [
-  {
-    href: "arkadiuszbiesiada@gmail.com",
-    src: "images/bytesize_mail.svg",
-    alt: "email",
-  },
-  {
-    href: "www.twitter.com",
-    src: "images/akar-icons_twitter-fill.svg",
-    alt: "twitter",
-  },
-  {
-    href: "abdevworks.github.com",
-    src: "images/akar-icons_github-fill.svg",
-    alt: "github",
-  },
-];
