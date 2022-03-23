@@ -16,7 +16,8 @@ const StyledHeaderNavigationWrapper = styled.header`
   background-color: var(--color-header);
   padding: 0 2em 0 2em;
   height: 100%;
-  min-height: 8vh;
+  min-height: 90px;
+  max-height: 8vh;
 
 
   @media only screen and (min-width: ${({ theme }) => theme.large}) {

@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 
-function FormInput({ type, name, id, marginBottom, height }) {
+function FormInput(props) {
+  
+  const {marginBottom, height, ...rest} = props;
+  
   return <StyledFormInputWrapper style={{
       '--marginBottom': marginBottom,
       '--height': height
-  }} type={type} name={name} id={id} />;
+  }} {...rest} />;
 }
 
 const StyledFormInputWrapper = styled.input`

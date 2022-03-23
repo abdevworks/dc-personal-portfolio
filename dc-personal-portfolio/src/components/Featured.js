@@ -2,17 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import ProjectCard from "./ProjectCard";
 
-function Featured({
-  featuredContent
-}) {
+function Featured({ portfolioContent }) {
+  console.log(portfolioContent);
   return (
     <StyledSectionWrapper>
-      <ProjectCard item={featuredContent}/>
+      {portfolioContent.map(
+        (item, index) =>
+          item.featured && <ProjectCard key={index} item={item} />
+      )}
     </StyledSectionWrapper>
   );
 }
 
-const StyledSectionWrapper = styled.section`
+export const StyledSectionWrapper = styled.section`
   position: relative;
 
   &::before {
@@ -26,9 +28,6 @@ const StyledSectionWrapper = styled.section`
     left: 0;
     opacity: 0.2;
   }
-
-
-  
 `;
 
 export default Featured;

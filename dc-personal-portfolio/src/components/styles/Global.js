@@ -55,7 +55,7 @@ section {
     padding: 10em 10em 4em 10em;
   }
   @media only screen and (min-width: ${({ theme }) => theme.xxl}) {
-    padding: 6em 20em 4em 20em;
+    padding: 6em 15em 4em 15em;
   }
 }
 

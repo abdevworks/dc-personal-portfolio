@@ -1,43 +1,80 @@
 export const portfolioContent = [
   {
     id: 1,
-    projectSubtitle: "guitar app",
-    projectTitle: "Fretastic.com",
+    projectSubtitle: "Featured Project",
+    projectTitle: "Linkedin Clone",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tortor a elit velit. Vel posuere lorem neque velit auctor ut gravida tellus. Vel quam mauris elementum fermentum mattis ante.",
-    src: "images/project-two.png",
-    alt: "fretastic",
+    image: {
+      src: "images/linked-in-clone.png",
+      alt: "featured project",
+    },
+    links: {
+      website: "https://linkedin-clone-yt-54cdd.web.app/",
+      design: "",
+      github:
+        "https://github.com/abdevworks/linkedin-clone-yt/tree/main/linkedin-clone-yt",
+    },
+    featured: true,
   },
   {
     id: 2,
-    projectSubtitle: "guitar app",
+    projectSubtitle: "guitar app one",
     projectTitle: "Fretastic.com",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tortor a elit velit. Vel posuere lorem neque velit auctor ut gravida tellus. Vel quam mauris elementum fermentum mattis ante.",
-    src: "images/project-two.png",
-    alt: "fretastic",
+    image: {
+      src: "images/project-two.png",
+      alt: "fretastic",
+    },
+    links: {
+      website: "https://linkedin-clone-yt-54cdd.web.app/",
+      design:
+        "https://www.figma.com/file/FUoFHw5EoNdavc7s2AmOVF/Portfolio-Project?node-id=2%3A2",
+      github:
+        "https://github.com/abdevworks/linkedin-clone-yt/tree/main/linkedin-clone-yt",
+    },
+    featured: false,
   },
   {
     id: 3,
-    projectSubtitle: "guitar app",
+    projectSubtitle: "guitar app two",
     projectTitle: "Fretastic.com",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tortor a elit velit. Vel posuere lorem neque velit auctor ut gravida tellus. Vel quam mauris elementum fermentum mattis ante.",
-    src: "images/project-two.png",
-    alt: "fretastic",
+    image: {
+      src: "images/project-two.png",
+      alt: "fretastic",
+    },
+    links: {
+      website: "https://linkedin-clone-yt-54cdd.web.app/",
+      design:
+        "https://www.figma.com/file/FUoFHw5EoNdavc7s2AmOVF/Portfolio-Project?node-id=2%3A2",
+      github:
+        "https://github.com/abdevworks/linkedin-clone-yt/tree/main/linkedin-clone-yt",
+    },
+    featured: false,
+  },
+  {
+    id: 4,
+    projectSubtitle: "guitar app three",
+    projectTitle: "Fretastic.com",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tortor a elit velit. Vel posuere lorem neque velit auctor ut gravida tellus. Vel quam mauris elementum fermentum mattis ante.",
+    image: {
+      src: "images/project-two.png",
+      alt: "fretastic",
+    },
+    links: {
+      website: "https://linkedin-clone-yt-54cdd.web.app/",
+      design:
+        "https://www.figma.com/file/FUoFHw5EoNdavc7s2AmOVF/Portfolio-Project?node-id=2%3A2",
+      github:
+        "https://github.com/abdevworks/linkedin-clone-yt/tree/main/linkedin-clone-yt",
+    },
+    featured: false,
   },
 ];
-
-export const featuredContent = {
-  id: 1,
-  projectSubtitle: "Featured Project",
-  projectTitle: "DesignCourse.com ReDesign",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tortor a elit velit. Vel posuere lorem neque velit auctor ut gravida tellus. Vel quam mauris elementum fermentum mattis ante.",
-  src: "images/project-one.png",
-  alt: "featured project",
-  href: "#",
-};
 
 export const skillContent = [
   {
@@ -63,3 +100,6 @@ export const skillContent = [
   },
 ];
 
+export function getProject(id) {
+  return portfolioContent.find((project) => project.id === id);
+}

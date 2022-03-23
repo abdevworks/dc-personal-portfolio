@@ -7,7 +7,7 @@ function FooterDesignSvg() {
       xmlns="http://www.w3.org/2000/svg"
       className="footer-hero-design"
       width="660"
-      height="300"
+      height="200"
       viewBox="0 0 686 400"
     >
       <g id="blockdesign" transform="translate(-935 -289)">
@@ -46,8 +46,8 @@ const StyledFooterSvg = styled.svg`
   display: none;
   position: absolute;
   bottom: 0;
-  left: -200px;
-  top: -260px;
+  left: -240px;
+  top: -175px;
 
   overflow-y: hidden;
 

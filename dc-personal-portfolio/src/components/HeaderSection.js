@@ -5,20 +5,23 @@ import SocialHeader from "./SocialHeader";
 import HeaderNavigation from "./HeaderNavigation";
 import NavigationOption from "./HeaderOption";
 import Logo from "./Logo";
+import { GlobalPaddingRight } from "./GlobalPadding";
 
-function HeaderSection({ logoText, socialMediaContent }) {
+function HeaderSection({ logoText }) {
   return (
     <GridContainer position="left">
       <HeaderNavigation>
-        <Logo href="index.html">{logoText}</Logo>
+        <Logo>{logoText}</Logo>
         <Navigation>
-          <NavigationOption href="#portfolio">Projekty</NavigationOption>
-          <NavigationOption href="#skills">Umiejętości</NavigationOption>
-          <NavigationOption href="#hireme">Kontakt</NavigationOption>
+          <NavigationOption href="/#portfolio">Projekty</NavigationOption>
+          <NavigationOption href="/#skills">Umiejętości</NavigationOption>
+          <NavigationOption href="/#hireme">Kontakt</NavigationOption>
         </Navigation>
       </HeaderNavigation>
 
-      <SocialHeader socialMediaContent={socialMediaContent} position="right" />
+      <GlobalPaddingRight>
+        <SocialHeader position="right" />
+      </GlobalPaddingRight>
     </GridContainer>
   );
 }

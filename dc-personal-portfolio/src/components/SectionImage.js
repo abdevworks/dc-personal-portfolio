@@ -1,12 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { StyledPortfolioWrapper } from "./Portfolio";
 
-const SectionImage = React.forwardRef(({ src, alt, href }, ref) => {
+const SectionImage = React.forwardRef(({ src, alt, href, id }, ref) => {
   return (
-    <a href={href}>
+    <Link to={`/projects/${id}`}>
       <StyledSectionImage src={src} alt={alt} ref={ref} />
-    </a>
+    </Link>
   );
 });
 

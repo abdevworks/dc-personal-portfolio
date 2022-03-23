@@ -10,7 +10,7 @@ function Portfolio({ portfolioContent, subtitleColor, bg }) {
       '--bg': bg
     }}>
       {portfolioContent.map((item, index) =>
-        <ProjectCard key={index} item={item} subtitleColor={subtitleColor}/>
+        !item.featured && <ProjectCard key={index} item={item} subtitleColor={subtitleColor}/>
       )}
     </StyledPortfolioWrapper>
   );

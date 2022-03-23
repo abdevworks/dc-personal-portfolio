@@ -1,12 +1,16 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 function SectionSubtitle({ subtitleColor, children }) {
   return (
-    <StyledSectionSubtitleWrapper style={{
-      '--color': subtitleColor
-    }}>{ children }</StyledSectionSubtitleWrapper>
-  )
+    <StyledSectionSubtitleWrapper
+      style={{
+        "--color": subtitleColor,
+      }}
+    >
+      {children}
+    </StyledSectionSubtitleWrapper>
+  );
 }
 
 const StyledSectionSubtitleWrapper = styled.p`
@@ -17,4 +21,4 @@ const StyledSectionSubtitleWrapper = styled.p`
   font-size: 0.85em;
 `;
 
-export default SectionSubtitle
+export default SectionSubtitle;

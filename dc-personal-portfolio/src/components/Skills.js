@@ -27,7 +27,6 @@ function Skills({ skillContent, bg }) {
     if(el && !revealRefs.current.includes(el)){
       revealRefs.current.push(el);
     }
-    console.log(revealRefs.current);
   };
 
   return (

@@ -1,13 +1,17 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
 
-function SectionTitle({ href, children }) {
+function SectionTitle({ id, children }) {
   return (
-    <StyledSectionTitleWrapper href={href}>{ children }</StyledSectionTitleWrapper>
-  )
+    <StyledSectionTitleWrapper to={`/projects/${id}`}>
+      {children}
+    </StyledSectionTitleWrapper>
+  );
 }
-
-const StyledSectionTitleWrapper = styled.a`
+ 
+const StyledSectionTitleWrapper = styled(Link)`
+  text-decoration: none;
   color: black;
   font-weight: bold;
   font-size: 1.3em;
@@ -15,4 +19,4 @@ const StyledSectionTitleWrapper = styled.a`
   display: block;
 `;
 
-export default SectionTitle
+export default SectionTitle;

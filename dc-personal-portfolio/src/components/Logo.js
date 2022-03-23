@@ -1,16 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function Logo({ children }) {
-  return <LogoLink>{children}</LogoLink>;
+  return <LogoLink to="/">{children}</LogoLink>;
 }
 
 export default Logo;
 
-const LogoLink = styled.a`
+const LogoLink = styled(Link)`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--color-logo);
+  text-decoration: none;
   font-weight: bold;
+  color: var(--color-logo);
+
 `;
