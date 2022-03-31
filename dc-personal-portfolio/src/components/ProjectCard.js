@@ -8,7 +8,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function ProjectCard({
-  item: { id, projectSubtitle, projectTitle, description, image: {src, alt} },
+  item: { id, projectSubtitle, projectTitle, description, image: {src, alt}, featured },
   subtitleColor,
 }) {
   const cardLeftRef = useRef();
@@ -32,10 +32,10 @@ function ProjectCard({
     <StyledCardContainer>
       <StyledCardLeft ref={cardLeftRef}>
         <SectionSubtitle subtitleColor={subtitleColor}>
-          {projectSubtitle}
+          {featured ? "Projekt wyróżniony" : projectSubtitle}
         </SectionSubtitle>
         <SectionTitle id={id}>{projectTitle}</SectionTitle>
-        <SectionDescription>{description}</SectionDescription>
+        <SectionDescription>{description.short}</SectionDescription>
       </StyledCardLeft>
 
       <SectionImage src={src} alt={alt} ref={imageRef}  id={id} />

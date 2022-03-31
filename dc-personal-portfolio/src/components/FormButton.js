@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import { StyledFormContainer } from "./FormContainer";
 
-function FormButton({ bg, color, children }) {
+function FormButton({ bg, color, children, ...rest }) {
   return (
     <StyledFormButtonWrapper
       style={{
         "--bg": bg,
         "--color": color,
       }}
+      {...rest}
     >
       {children}
     </StyledFormButtonWrapper>

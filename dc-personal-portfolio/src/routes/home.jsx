@@ -13,7 +13,7 @@ const Home = () => {
     <>
       {" "}
       <Hero
-        title="Beutifuly Crafted Web Experiences"
+        title="Pozwól, aby twoje pomysły stały się rzeczywistością."
         meet="Arkadiusza Biesiadę"
       />
       <Featured portfolioContent={portfolioContent} />

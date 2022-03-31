@@ -5,7 +5,6 @@ import Meet from "./Meet";
 import ScrollSvg from "./ScrollSvg";
 import HeroDesignSvg from "./HeroDesignSvg";
 import GridContainer from "./GridContainer";
-import BackgroundColor from "./BackgroundColor";
 
 function Hero({ title, meet, bg, meetColor }) {
   const heroConRef = useRef();

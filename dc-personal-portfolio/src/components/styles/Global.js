@@ -7,6 +7,7 @@ html {
   --color-logo: #72e6ff;
   --color-hero: #6e00ff;
   --color-skills: #ff64cb;
+  --color-error: #ff55ff;
   --color-portfolio: #f7f7f7;
   --color-bg-default: white;
 
@@ -18,12 +19,16 @@ html {
   --large: "1050px";
   --xl: "1250px";
   --xxl: "1550px";
+
+  --font-family: "Poppins", -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+    "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial,
+    sans-serif;
 }
 
 body {
   height: 100vh;
   margin: 0;
-  font-family: "Poppins", arial;
+  font-family: var(--font-family);
   background-color: whitesmoke;
   max-width: 1920px;
   margin: 0 auto;

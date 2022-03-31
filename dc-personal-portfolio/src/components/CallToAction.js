@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import { gsap } from "gsap";
 import styled from "styled-components";
 import ActionHeading from "./ActionHeading";
 
 
 function CallToAction({  height, padding, color }) {
+
+  const actionHeadingRef = useRef();
+
+  useEffect(() => {
+    gsap.from(actionHeadingRef.current, {
+      scrollTrigger: {
+        trigger: actionHeadingRef.current,
+        start: "top bottom",
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1.2,
+      stagger: 0.3,
+    });
+  });
+
+
   return (
     <StyledCallToActionWrapper id="hireme" style={{
       '--height': height,
-      '--padding': padding
+      '--padding': padding,
     }}>
-      <ActionHeading color={ color }>
-        Like what you see? <span>Hire me</span>
+      <ActionHeading color={ color } ref={actionHeadingRef}>
+        Podoba ci się to co widzisz? <span>Zatrudnij mnie!</span>
       </ActionHeading>
     </StyledCallToActionWrapper>
   );

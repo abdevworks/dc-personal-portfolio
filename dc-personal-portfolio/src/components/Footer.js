@@ -13,8 +13,8 @@ function Footer() {
         <Logo href="index.html">Arkadiusz Biesiada</Logo>
 
         <Navigation>
-          <NavigationOption href="#portfolio">My work</NavigationOption>
-          <NavigationOption href="#skills">My skills</NavigationOption>
+          <NavigationOption href="#portfolio">Projekty</NavigationOption>
+          <NavigationOption href="#skills">Umiejętności</NavigationOption>
         </Navigation>
       </StyledFooterContainer>
     </StyledFooter>

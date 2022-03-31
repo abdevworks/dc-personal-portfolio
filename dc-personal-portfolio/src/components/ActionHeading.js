@@ -1,13 +1,18 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react";
+import styled from "styled-components";
 
-function ActionHeading({ color, children }) {
+const ActionHeading = React.forwardRef(({ color, children }, ref) => {
   return (
-    <StyledCallToActionTitle style={{
-        '--color': color
-    }}>{ children }</StyledCallToActionTitle>
-  )
-}
+    <StyledCallToActionTitle
+      style={{
+        "--color": color,
+      }}
+      ref={ref}
+    >
+      {children}
+    </StyledCallToActionTitle>
+  );
+});
 
 const StyledCallToActionTitle = styled.h1`
   margin: 0;
@@ -19,4 +24,4 @@ const StyledCallToActionTitle = styled.h1`
   }
 `;
 
-export default ActionHeading
+export default ActionHeading;
