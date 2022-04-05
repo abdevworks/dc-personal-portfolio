@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "dotenv": "^16.0.0",
     "emailjs-com": "^3.2.0",
+    "firebase": "^9.6.10",
     "formik": "^2.2.9",
     "gsap": "^3.9.1",
     "html-react-parser": "^1.4.10",

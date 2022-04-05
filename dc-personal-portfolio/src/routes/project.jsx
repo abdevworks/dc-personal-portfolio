@@ -49,12 +49,12 @@ const Project = () => {
 
       <StyledProjectDescription ref={projectDescriptionRef}>
         {" "}
-        <SectionSubtitle>PROJECT INFORMATION</SectionSubtitle>
+        <SectionSubtitle>INFORMACJA O PROJEKCIE</SectionSubtitle>
         <span>{parse(description.full)}</span>
-        <SectionSubtitle>PROJECT LINKS</SectionSubtitle>
+        <SectionSubtitle>LINKI DO PROJEKTU</SectionSubtitle>
         <ProjectLinksNavigation position="left" links={links} />
       </StyledProjectDescription>
-      <CallToAction padding="3em"/>
+      <CallToAction padding="5em"/>
     </StyledProject>
   );
 };
@@ -83,6 +83,7 @@ const StyledProjectDescription = styled.section`
 `;
 
 const StyledProjectImage = styled.img`
+  opacity: 0.75;
   min-height: 100px;
   max-height: 500px;
   object-position: top;
