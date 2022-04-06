@@ -1,7 +1,7 @@
 export const portfolioContent = [
   {
     id: 1,
-    projectSubtitle: "Linkedin app",
+    projectSubtitle: "Projekt Linkedin Clone",
     projectTitle: "Linkedin Clone",
     description: {
       short:`
@@ -48,7 +48,7 @@ export const portfolioContent = [
   },
   {
     id: 2,
-    projectSubtitle: "Portfolio app",
+    projectSubtitle: "Projekt Portfolio",
     projectTitle: "Abwebdev-portfolio",
     description: {
       short:

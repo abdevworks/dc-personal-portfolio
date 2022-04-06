@@ -8,7 +8,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 function SocialHeader({ position = "center" }) {
   return (
     <IconNavigationSocial position={position}>
-      <IconNavigationOption Icon={EmailIcon} href="arkadiuszbiesiada@gmail.com" />
+      <IconNavigationOption Icon={EmailIcon} href="mailto:arkadiuszbiesiada@gmail.com" />
       <IconNavigationOption
         Icon={LinkedInIcon}
         href="https://www.linkedin.com/in/arkadiusz-biesiada-ab600722b/"
