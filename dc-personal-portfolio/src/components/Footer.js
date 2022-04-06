@@ -2,7 +2,7 @@ import React from "react";
 import FooterDesignSvg from "./FooterDesignSvg";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
-import NavigationOption from "./HeaderOption";
+import NavigationOption from "./NavigationOption";
 import styled from "styled-components";
 
 function Footer() {
@@ -10,7 +10,7 @@ function Footer() {
     <StyledFooter>
       <FooterDesignSvg />
       <StyledFooterContainer>
-        <Logo href="index.html">Arkadiusz Biesiada</Logo>
+        <Logo>Arkadiusz Biesiada</Logo>
 
         <Navigation>
           <NavigationOption href="#portfolio">Projekty</NavigationOption>
@@ -24,7 +24,9 @@ function Footer() {
 const StyledFooter = styled.footer`
   background-color: ${({ theme }) => theme.colors.header};
   position: relative;
-  height: 8vh;
+  height: 100%;
+  min-height: 90px;
+  max-height: 8vh;
   display: flex;
   justify-content: space-between;
   align-items: center;

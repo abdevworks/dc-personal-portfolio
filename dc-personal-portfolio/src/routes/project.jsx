@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { getProject } from "../content";
@@ -15,6 +15,10 @@ const Project = () => {
   const projectHeaderRef = useRef();
   const projectImageRef = useRef();
   const projectDescriptionRef = useRef();
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0)
+});
 
   useEffect(() => {
     gsap.from([projectHeaderRef.current, projectImageRef.current, projectDescriptionRef.current], {
@@ -54,7 +58,7 @@ const Project = () => {
         <SectionSubtitle>LINKI DO PROJEKTU</SectionSubtitle>
         <ProjectLinksNavigation position="left" links={links} />
       </StyledProjectDescription>
-      <CallToAction padding="5em"/>
+      <CallToAction padding="5em" href={"/#hireme"}/>
     </StyledProject>
   );
 };

@@ -18,7 +18,7 @@ const StyledNavigationWrapper = styled.nav`
     display: flex;
     justify-content: center;
     height: 100%;
-
+    min-height: 90px;
     a {
       display: flex;
       justify-content: center;

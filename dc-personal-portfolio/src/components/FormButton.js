@@ -10,6 +10,7 @@ function FormButton({ bg, color, children, ...rest }) {
         "--color": color,
       }}
       {...rest}
+      
     >
       {children}
     </StyledFormButtonWrapper>
@@ -19,10 +20,20 @@ function FormButton({ bg, color, children, ...rest }) {
 const StyledFormButtonWrapper = styled.button`
   color: var(--color, white);
   background-color: var(--bg, var(--color-skills));
+  cursor: pointer;
   font-weight: bold;
   border: none;
   height: 3em;
   width: 10em;
+
+  &:hover {
+    filter: brightness(110%);
+  }
+
+  &:disabled{
+    cursor: unset;
+    filter: brightness(75%);
+  }
 
   ${StyledFormContainer} & {
     align-self: flex-end;

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 function Logo({ children }) {
-  return <LogoLink to="/">{children}</LogoLink>;
+  return <LogoLink to="/" onClick={() => window.scrollTo(0, 0)}>{children}</LogoLink>;
 }
 
 export default Logo;

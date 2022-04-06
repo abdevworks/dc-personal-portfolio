@@ -88,7 +88,7 @@ const ContactForm = React.forwardRef(({ bg }, ref) => {
             </StyledErrorMessage>
           ) : null}
 
-          <FormButton type="submit" name="send" id="contact-form-send-button">
+          <FormButton type="submit" name="send" id="contact-form-send-button" disabled={formik.isSubmitting}>
             Wyślij
           </FormButton>
         </StyledForm>

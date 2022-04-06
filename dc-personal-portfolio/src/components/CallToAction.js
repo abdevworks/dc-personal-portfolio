@@ -4,7 +4,7 @@ import styled from "styled-components";
 import ActionHeading from "./ActionHeading";
 
 
-function CallToAction({  height, padding, color }) {
+function CallToAction({  height, padding, href, color }) {
 
   const actionHeadingRef = useRef();
 
@@ -28,7 +28,7 @@ function CallToAction({  height, padding, color }) {
       '--padding': padding,
     }}>
       <ActionHeading color={ color } ref={actionHeadingRef}>
-        Podoba ci się to co widzisz? <span>Zatrudnij mnie!</span>
+        Podoba ci się to co widzisz? <a href={href}><span>Zatrudnij mnie!</span></a>
       </ActionHeading>
     </StyledCallToActionWrapper>
   );

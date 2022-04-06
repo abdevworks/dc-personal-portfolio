@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
 import CallToAction from "../components/CallToAction";
 import Contact from "../components/Contact";
 import Featured from "../components/Featured";
@@ -9,6 +9,10 @@ import Skills from "../components/Skills";
 import { skillContent, portfolioContent } from "../content";
 
 const Home = () => {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <>
       {" "}

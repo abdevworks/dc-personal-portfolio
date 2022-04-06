@@ -5,7 +5,6 @@ import GlobalStyles from "./components/styles/Global";
 import HeaderSection from "./components/HeaderSection";
 import BackgroundColor from "./components/BackgroundColor";
 
-
 const theme = {
   colors: {
     header: "#6700ee",
@@ -21,6 +20,7 @@ const theme = {
 };
 
 function App() {
+
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />

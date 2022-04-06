@@ -3,7 +3,7 @@ import GridContainer from "./GridContainer";
 import Navigation from "./Navigation";
 import SocialHeader from "./SocialHeader";
 import HeaderNavigation from "./HeaderNavigation";
-import NavigationOption from "./HeaderOption";
+import NavigationOption from "./NavigationOption";
 import Logo from "./Logo";
 import { GlobalPaddingRight } from "./GlobalPadding";
 
