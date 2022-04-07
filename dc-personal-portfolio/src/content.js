@@ -77,7 +77,7 @@ export const portfolioContent = [
       alt: "portfolio-project",
     },
     links: {
-      website: "https://linkedin-clone-yt-54cdd.web.app/",
+      website: "https://abwebdev-portfolio.web.app/",
       design:
         "https://www.figma.com/file/FUoFHw5EoNdavc7s2AmOVF/Portfolio-Project?node-id=2%3A2",
       github:
